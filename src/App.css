@@ -1,22 +1,28 @@
-/* Alapbeállítások, hogy teljes képernyős legyen */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffe4e6; /* Halvány rózsaszín háttér */
-  overflow: hidden; /* Hogy ne lehessen görgetni, ha a gomb túl nagy lesz */
+  background-color: #ffe4e6;
+  overflow: hidden;
+  /* Biztosítjuk, hogy a body ne legyen nagyobb a képernyőnél */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .container {
-  width: 100dvw;
+  /* vw helyett %-ot használunk a jobb mobil kompatibilitásért */
+  width: 100%;
+  max-width: 600px; /* Megakadályozza, hogy túl széles legyen tableten */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
+  min-height: 100dvh;
   text-align: center;
   padding: 20px;
+  box-sizing: border-box; /* Ez fontos: a padding beleszámít a 100%-ba */
 }
 
 .cute-gif {
@@ -46,10 +52,11 @@ body, html {
 
 .button-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row; /* Alapértelmezésben egymás mellett */
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 
 .yes-button {
@@ -80,4 +87,13 @@ body, html {
 
 .no-button:hover {
   background-color: #dc2626;
+}
+@media (max-width: 480px) {
+  .question-text {
+    font-size: 1.8rem; /* Kisebb kijelzőn ne törjön szét a szöveg */
+  }
+  
+  .cute-gif {
+    width: 150px; /* Kisebb kép mobilon */
+  }
 }

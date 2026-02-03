@@ -38,7 +38,7 @@ const ValentinePage: React.FC = () => {
             className="cute-gif"
           />
           <h1 className="success-text">Tudtam én cula! ❤️</h1>
-          <p className="date-text">Szombaton eljönnél velem a pizza teraszba?</p>
+          <p className="date-text">Szombaton eljönnél velem a Pizza Teraszra?</p>
         </div>
       ) : (
         <div className="question-container">
