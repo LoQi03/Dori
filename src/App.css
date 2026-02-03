@@ -1,0 +1,83 @@
+/* Alapbeállítások, hogy teljes képernyős legyen */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffe4e6; /* Halvány rózsaszín háttér */
+  overflow: hidden; /* Hogy ne lehessen görgetni, ha a gomb túl nagy lesz */
+}
+
+.container {
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  text-align: center;
+  padding: 20px;
+}
+
+.cute-gif {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 2.5rem;
+  color: #be185d; /* Sötét rózsaszín */
+  margin-bottom: 30px;
+}
+
+.success-text {
+  font-size: 3rem;
+  color: #be185d;
+  font-weight: bold;
+}
+
+.date-text {
+  font-size: 1.2rem;
+  color: #831843;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.yes-button {
+  background-color: #22c55e; /* Zöld */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Finom animáció */
+}
+
+.yes-button:hover {
+  background-color: #16a34a;
+}
+
+.no-button {
+  background-color: #ef4444; /* Piros */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px; /* A Nem gomb mérete fix marad */
+  cursor: pointer;
+}
+
+.no-button:hover {
+  background-color: #dc2626;
+}
